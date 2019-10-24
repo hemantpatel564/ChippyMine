@@ -8,6 +8,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
+import android.media.MediaPlayer;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
@@ -315,7 +316,7 @@ public class GameEngine extends SurfaceView implements Runnable {
     }
 
     public void redrawSprites() {
-        //Keeps count of framenumber
+        //Keeps count of frame number
         frameNumber++;
 
         if (this.holder.getSurface().isValid()) {
@@ -371,6 +372,7 @@ public class GameEngine extends SurfaceView implements Runnable {
                 canvas.drawRect(bullet.getHibox(), paintbrush);
                 paintbrush.setColor(Color.BLUE);
             }
+                //sounds
 
             this.holder.unlockCanvasAndPost(canvas);
         }
@@ -398,6 +400,10 @@ public class GameEngine extends SurfaceView implements Runnable {
         player.getHitbox().top = player.getyPos();
         player.getHitbox().bottom = player.getyPos() + player.getImage().getHeight();
 
+    }
+    public void moveEnemy(Bitmap Enemy ,float getxPos, float getyPos)
+    {
+        enemy.setyPos(enemy.getyPos() + 10);
     }
 
 

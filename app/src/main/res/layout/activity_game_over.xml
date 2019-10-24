@@ -6,14 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".GameOverActivity">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/lose" />
+
     <Button
         android:id="@+id/startNewGame"
         android:layout_width="720dp"
         android:layout_height="55dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="36dp"
+        android:layout_gravity="bottom"
         android:text="Start New Game"
         android:textColor="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -21,16 +30,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="603dp"
-        android:layout_height="266dp"
-        android:layout_marginStart="74dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="54dp"
-        android:background="#000A0A0A"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/lose" />
+
+
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
